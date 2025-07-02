@@ -5,7 +5,6 @@ import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
 import { checkUserRole } from '../../../utils/checkRole';
-import ChatIcon from '@/assets/ChatIcon';
 export default function ExplorePage() {
   const supabase = createClientComponentClient();
   const router = useRouter();
