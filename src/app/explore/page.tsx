@@ -85,7 +85,7 @@ export default function ExplorePage() {
       <div style={styles.header}>
         <span style={styles.backBtn} onClick={() => router.back()}>←</span>
         <h2 style={styles.logo}>BookMyGig</h2>
-         <p style={{ color: '#666', marginTop: 4 }}>Find top gig professionals near you</p> */}
+         <p style={{ color: '#666', marginTop: 4 }}>Find top gig professionals near you</p>
       </div>
 
       {loading ? (
