@@ -153,7 +153,7 @@ const styles = {
   },
   logo: {
     flex: 1,
-    textAlign: 'center',
+    // textAlign: 'center',
     fontSize: 26,
     fontWeight: 'bold',
     color: '#000',
