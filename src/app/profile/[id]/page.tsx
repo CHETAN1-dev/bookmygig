@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { SetStateAction, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { DateRange } from 'react-date-range';
@@ -186,7 +186,7 @@ export default function ProfilePage() {
             <div style={styles.calendarPopup}>
               <DateRange
                 editableDateInputs={true}
-                onChange={(ranges) => setSelectedRange(ranges.selection)}
+                onChange={(ranges: { selection: SetStateAction<{ startDate: Date; endDate: Date; key: string; }>; }) => setSelectedRange(ranges.selection)}
                 moveRangeOnFirstSelection={false}
                 ranges={[selectedRange]}
               />
@@ -346,7 +346,7 @@ const styles = {
     border: 'none',
   },
   calendarOverlay: {
-    position: 'fixed',
+    // position: 'fixed',
     top: 0,
     left: 0,
     width: '100%',
@@ -371,7 +371,7 @@ const styles = {
     fontSize: 14,
     marginTop: 8,
     marginBottom: 8,
-    textAlign: 'center',
+    // textAlign: 'center',
   },
   confirmBtn: {
     marginTop: 16,
